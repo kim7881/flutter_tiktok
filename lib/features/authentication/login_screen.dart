@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tiktok/constants/gaps.dart';
 import 'package:flutter_tiktok/constants/sizes.dart';
-import 'package:flutter_tiktok/features/authentication/sing_up_screen.dart';
 import 'package:flutter_tiktok/features/authentication/widgets/auth_button.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -19,9 +18,9 @@ class LoginScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: Sizes.size40),
           child: Column(
-            children: const [
+            children: [
               Gaps.v80,
-              Text(
+              const Text(
                 'Log in to TikTok',
                 style: TextStyle(
                   fontSize: Sizes.size24,
@@ -29,7 +28,7 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               Gaps.v20,
-              Text(
+              const Text(
                 'Manage your account, check notifications,'
                 ' comment on videos, and more.',
                 style: TextStyle(
@@ -40,11 +39,13 @@ class LoginScreen extends StatelessWidget {
               ),
               Gaps.v40,
               AuthButton(
-                text: 'Use phone or email',
+                onTap: (){},
+                text: 'Use email & password',
                 icon: FaIcon(FontAwesomeIcons.user),
               ),
               Gaps.v16,
               AuthButton(
+                onTap: (){},
                 text: 'Continue with Apple',
                 icon: FaIcon(FontAwesomeIcons.apple),
               ),
@@ -54,7 +55,7 @@ class LoginScreen extends StatelessWidget {
       ),
       bottomNavigationBar: BottomAppBar(
         elevation: 2,
-        color: Colors.grey.shade100,
+        color: Colors.grey.shade50,
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: Sizes.size32),
           child: Row(
