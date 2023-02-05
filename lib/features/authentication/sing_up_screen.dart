@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tiktok/constants/gaps.dart';
 import 'package:flutter_tiktok/constants/sizes.dart';
+import 'package:flutter_tiktok/features/authentication/login_screen.dart';
+import 'package:flutter_tiktok/features/authentication/widgets/auth_button.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({Key? key}) : super(key: key);
+
+  void onLoginTap(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => const LoginScreen(),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +41,9 @@ class SignUpScreen extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
+              Gaps.v40,
+              AuthButton(text: 'Use phone or email'),
+              AuthButton(text: 'Continue with Apple'),
             ],
           ),
         ),
@@ -42,14 +55,22 @@ class SignUpScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: Sizes.size32),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children:  [
-              const Text('Already have an account?'),
-              Gaps.h5,
-              Text(
-                'Log in',
+            children: [
+              const Text(
+                'Already have an account?',
                 style: TextStyle(
-                  color: Theme.of(context).primaryColor,
-                  fontWeight: FontWeight.w600,
+                  fontSize: Sizes.size16,
+                ),
+              ),
+              Gaps.h5,
+              GestureDetector(
+                onTap: () => onLoginTap(context),
+                child: Text(
+                  'Log in',
+                  style: TextStyle(
+                    color: Theme.of(context).primaryColor,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ),
             ],
