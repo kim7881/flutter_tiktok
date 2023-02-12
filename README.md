@@ -8,3 +8,4 @@ Flutter TikTok
 5 - Username Screen
 6 - FormButton
 7 - Email Screen
+8 - Password Screen
