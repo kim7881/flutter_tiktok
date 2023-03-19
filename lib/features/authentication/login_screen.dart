@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tiktok/constants/gaps.dart';
 import 'package:flutter_tiktok/constants/sizes.dart';
+import 'package:flutter_tiktok/features/authentication/login_from_screen.dart';
 import 'package:flutter_tiktok/features/authentication/widgets/auth_button.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
-  void onSignUpTap(BuildContext context){
+  void onSignUpTap(BuildContext context) {
     Navigator.of(context).pop();
+  }
+
+  void _onEmailLoginTap(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => const LoginFormScreen(),
+      ),
+    );
   }
 
   @override
@@ -38,14 +47,15 @@ class LoginScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               Gaps.v40,
-              AuthButton(
-                onTap: (){},
-                text: 'Use email & password',
-                icon: FaIcon(FontAwesomeIcons.user),
+              GestureDetector(
+                onTap: () => _onEmailLoginTap(context),
+                child: const AuthButton(
+                  text: 'Use email & password',
+                  icon: FaIcon(FontAwesomeIcons.user),
+                ),
               ),
               Gaps.v16,
-              AuthButton(
-                onTap: (){},
+              const AuthButton(
                 text: 'Continue with Apple',
                 icon: FaIcon(FontAwesomeIcons.apple),
               ),
