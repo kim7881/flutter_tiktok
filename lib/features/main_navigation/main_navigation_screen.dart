@@ -18,15 +18,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
     const Center(
       child: Text('Search'),
     ),
-    const Center(
-      child: Text('Home'),
-    ),
-    const Center(
-      child: Text('Search'),
-    ),
-    const Center(
-      child: Text('Search'),
-    ),
+
   ];
 
   void _onTap(int index){
@@ -40,10 +32,10 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
     return Scaffold(
       body: screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        // type: BottomNavigationBarType.fixed,
+        type: BottomNavigationBarType.shifting,
         currentIndex: _selectedIndex,
         onTap: _onTap,
-        selectedItemColor: Theme.of(context).primaryColor,
+        // selectedItemColor: Theme.of(context).primaryColor,
         items: const [
           BottomNavigationBarItem(
             icon: FaIcon(
@@ -61,30 +53,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
               tooltip: 'What are you?',
             backgroundColor: Colors.blue,
           ),
-          BottomNavigationBarItem(
-              icon: FaIcon(
-                FontAwesomeIcons.house,
-              ),
-              label: "Home",
-              tooltip: 'What are you?',
-            backgroundColor: Colors.pink,
-          ),
-          BottomNavigationBarItem(
-              icon: FaIcon(
-                FontAwesomeIcons.house,
-              ),
-              label: "Home",
-              tooltip: 'What are you?',
-            backgroundColor: Colors.yellow,
-          ),
-          BottomNavigationBarItem(
-              icon: FaIcon(
-                FontAwesomeIcons.house,
-              ),
-              label: "Home",
-              tooltip: 'What are you?',
-            backgroundColor: Colors.teal,
-          ),
+
         ],
       ),
     );
