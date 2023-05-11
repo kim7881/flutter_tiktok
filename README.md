@@ -24,3 +24,4 @@ Flutter TikTok
 21 - CupertinoTabBar
 22 - Custom NavigationBar
 23 - Stateful Navigation part One
+24 - Stateful Navigation part Two
