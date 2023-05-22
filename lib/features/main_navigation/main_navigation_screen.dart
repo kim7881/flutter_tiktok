@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tiktok/constants/gaps.dart';
 import 'package:flutter_tiktok/constants/sizes.dart';
-import 'package:flutter_tiktok/features/main_navigation/stf_screen.dart';
 import 'package:flutter_tiktok/features/main_navigation/widgets/nav_tab.dart';
 import 'package:flutter_tiktok/features/main_navigation/widgets/post_video_button.dart';
+import 'package:flutter_tiktok/features/videos/video_timeline_screen.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MainNavigationScreen extends StatefulWidget {
@@ -42,19 +42,19 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
         children: [
           Offstage(
             offstage: _selectedIndex != 0,
-            child: StfScreen(),
+            child: VideoTimeLineScreen(),
           ),
           Offstage(
             offstage: _selectedIndex != 1,
-            child: StfScreen(),
+            child: Container(),
           ),
           Offstage(
             offstage: _selectedIndex != 3,
-            child: StfScreen(),
+            child: Container(),
           ),
           Offstage(
             offstage: _selectedIndex != 4,
-            child: StfScreen(),
+            child: Container(),
           ),
         ],
       ),
