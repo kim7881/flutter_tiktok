@@ -20,19 +20,19 @@ class _VideoTimeLineScreenState extends State<VideoTimeLineScreen> {
   ];
 
   void _onPageChanged(int page) {
+    _pageController.animateToPage(
+      page,
+      duration: Duration(milliseconds: 100),
+      curve: Curves.linear,
+    );
     if (page == _itemCount - 1) {
-      _pageController.animateToPage(
-        0,
-        duration: Duration(seconds: 5),
-        curve: Curves.bounceOut,
-      );
-      // _itemCount = _itemCount + 4;
-      // colors.addAll([
-      //   Colors.blue,
-      //   Colors.red,
-      //   Colors.yellow,
-      //   Colors.teal,
-      // ]);
+      _itemCount = _itemCount + 4;
+      colors.addAll([
+        Colors.blue,
+        Colors.red,
+        Colors.yellow,
+        Colors.teal,
+      ]);
       setState(() {});
     }
   }
