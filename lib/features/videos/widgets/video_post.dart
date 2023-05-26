@@ -10,6 +10,10 @@ class VideoPost extends StatefulWidget {
 class _VideoPostState extends State<VideoPost> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Center(
+        child: Text('Hello'),
+      ),
+    );
   }
 }
