@@ -28,3 +28,5 @@ Flutter TikTok
 25 - Post Video Button
 26 - Introduction -> Video Timeline
 27 - Infinite Scrolling
+28 - PageController
+29 - Video Player
