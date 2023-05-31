@@ -30,3 +30,4 @@ Flutter TikTok
 27 - Infinite Scrolling
 28 - PageController
 29 - Video Player
+30 - VisibilityDetector
