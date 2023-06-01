@@ -31,3 +31,4 @@ Flutter TikTok
 28 - PageController
 29 - Video Player
 30 - VisibilityDetector
+31 - AnimationController
