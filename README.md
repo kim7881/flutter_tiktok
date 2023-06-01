@@ -32,3 +32,4 @@ Flutter TikTok
 29 - Video Player
 30 - VisibilityDetector
 31 - AnimationController
+32 - AnimatedBuilder
