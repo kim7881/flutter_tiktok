@@ -33,3 +33,4 @@ Flutter TikTok
 30 - VisibilityDetector
 31 - AnimationController
 32 - AnimatedBuilder
+33 - SingleTickerProviderStateMixin
