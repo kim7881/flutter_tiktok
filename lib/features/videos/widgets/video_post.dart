@@ -150,7 +150,7 @@ class _VideoPostState extends State<VideoPost>
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
                 Text(
-                  '@진현',
+                  '@진현의 영상',
                   style: TextStyle(
                     fontSize: Sizes.size20,
                     color: Colors.white,
@@ -159,7 +159,7 @@ class _VideoPostState extends State<VideoPost>
                 ),
                 Gaps.v10,
                 Text(
-                  "This is my house in Korea",
+                  "This is my house in Busan",
                   style: TextStyle(
                     fontSize: Sizes.size16,
                     color: Colors.white,
@@ -184,14 +184,14 @@ class _VideoPostState extends State<VideoPost>
                 Gaps.v24,
                 const VideoButton(
                   icon: FontAwesomeIcons.solidHeart,
-                  text: "2.9M",
+                  text: "3.9M",
                 ),
                 Gaps.v24,
                 GestureDetector(
                   onTap: () => _onCommentsTap(context),
                   child: const VideoButton(
                     icon: FontAwesomeIcons.solidComment,
-                    text: "33K",
+                    text: "53K",
                   ),
                 ),
                 Gaps.v24,
